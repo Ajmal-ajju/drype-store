@@ -1,0 +1,48 @@
+DRYPE — FINAL STORE SETUP
+==========================
+
+This package is ready for Netlify.
+
+1. EXTRACT THIS ZIP
+   On Chromebook: Files app → Downloads → right-click the ZIP → Extract all.
+
+2. UPLOAD THE WHOLE FOLDER
+   Upload/drag the extracted DRYPE-Final-Store folder to Netlify Drop.
+   Do NOT upload only the netlify folder.
+
+3. SET ADMIN PASSWORD ON NETLIFY
+   After the site is created:
+   Netlify → Project configuration → Environment variables.
+   Add:
+     ADMIN_PASSWORD = [the password you chose for DRYPE]
+     SESSION_SECRET = [make a long random secret]
+     UPI_ID = [your business UPI ID]
+     UPI_NAME = [your business/display name]
+
+   IMPORTANT: Never put ADMIN_PASSWORD or UPI_ID into HTML or JavaScript.
+
+4. REDEPLOY
+   After saving environment variables, create a new deploy.
+
+5. ADMIN PAGE
+   Open:
+     https://YOUR-SITE.netlify.app/admin.html
+
+6. ADD PRODUCTS WITHOUT EDITING CODE
+   Sign in → Add product → enter:
+   - Product name
+   - Category
+   - Price
+   - Image URL
+   - Description
+   → Add product
+
+   Products are stored server-side through the Netlify function, so you do not
+   need to edit script.js every time you add a product.
+
+7. DTDC
+   Admin → DTDC shipment → enter Order ID and AWB/Consignment ID → Save tracking.
+
+8. IMPORTANT
+   UPI intent starts a payment flow but does not by itself prove that payment
+   was received. Verify payment before dispatching an order.

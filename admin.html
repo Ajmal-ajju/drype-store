@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DRYPE — Admin</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main class="admin-shell">
+  <section id="loginView" class="panel login-panel">
+    <p class="eyebrow">DRYPE / PRIVATE AREA</p>
+    <h1>Admin <em>login.</em></h1>
+    <p>Use the password configured in your Netlify environment variables.</p>
+    <form id="loginForm">
+      <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+      <button>Sign in</button>
+      <p id="loginError" class="error"></p>
+    </form>
+  </section>
+
+  <section id="adminView" class="hidden">
+    <header class="admin-top">
+      <div><strong>DRYPE</strong><span>PRODUCT MANAGEMENT</span></div>
+      <button id="logoutButton" class="ghost">Log out</button>
+    </header>
+
+    <div class="dashboard">
+      <section class="panel">
+        <div class="panel-head"><h2>Add product</h2><span>Catalog</span></div>
+        <form id="productForm" class="form-grid">
+          <label>Name<input name="name" required></label>
+          <label>Category<select name="category"><option value="abayas">Abayas</option><option value="jackets">Jackets</option><option value="shirts">Shirts</option><option value="shoes">Shoes</option><option value="pants">Pants</option></select></label>
+          <label>Price (₹)<input name="price" type="number" min="1" required></label>
+          <label>Image URL<input name="image" type="url" placeholder="https://..."></label>
+          <label class="wide">Description<textarea name="description" rows="3"></textarea></label>
+          <button class="wide">Add product</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Products</h2><span id="productCount">0</span></div>
+        <div id="productList" class="product-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>DTDC shipment</h2><span>Tracking ID</span></div>
+        <form id="trackingForm" class="form-grid">
+          <label>Order ID<input name="orderId" required placeholder="DRYPE-1001"></label>
+          <label>DTDC AWB / Consignment ID<input name="trackingId" required></label>
+          <button class="wide">Save tracking</button>
+        </form>
+        <p id="trackingMessage" class="status"></p>
+      </section>
+
+      <section class="panel security-note">
+        <h2>Security</h2>
+        <ul>
+          <li>Password is read from the server environment, not stored in this page.</li>
+          <li>Admin session uses an HTTP-only secure cookie.</li>
+          <li>Products and orders are stored server-side with Netlify Blobs.</li>
+          <li>Never put payment credentials or the admin password into HTML/JS.</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

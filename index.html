@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DRYPE — OWN IT</title>
+    <meta name="description" content="DRYPE — Own your style. Abayas, jackets, shirts, shoes and pants.">
+
+    <!-- Social share preview (WhatsApp, Instagram, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DRYPE">
+    <meta property="og:title" content="DRYPE — OWN IT">
+    <meta property="og:description" content="Own your style. Abayas, jackets, shirts, shoes and pants.">
+    <!-- TODO: replace with a real hosted image URL (min 1200x630px) once you have one -->
+    <meta property="og:image" content="https://drype-own-it.netlify.app/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DRYPE — OWN IT">
+    <meta name="twitter:description" content="Own your style. Abayas, jackets, shirts, shoes and pants.">
+    <meta name="twitter:image" content="https://drype-own-it.netlify.app/og-image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= PRELOADER ================= -->
+
+<div class="loader" id="loader">
+    <div class="loader-logo">DRYPE</div>
+    <div class="loader-line"></div>
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header" id="header">
+
+    <a href="#home" class="logo">
+        <span>DRYPE</span>
+        <small>OWN IT</small>
+    </a>
+
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#tracking">Track Order</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <a
+            href="https://www.instagram.com/__minshu._/"
+            target="_blank"
+            class="instagram"
+            aria-label="Instagram"
+        >
+            ◎
+        </a>
+
+        <button class="cart-button" id="cartButton">
+            Cart
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MOBILE NAV ================= -->
+
+<div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-background-text">
+        DRYPE
+    </div>
+
+    <div class="hero-content reveal">
+
+        <p class="eyebrow">MODERN FASHION / EST. 2026</p>
+
+        <h1>
+            OWN
+            <span>YOUR</span>
+            STYLE.
+        </h1>
+
+        <p class="hero-description">
+            Premium fashion made for people who don't follow the crowd.
+            Discover your next signature look.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#shop" class="btn btn-dark">
+                Explore Collection
+                <span>↗</span>
+            </a>
+
+            <a href="#about" class="btn btn-light">
+                Our Story
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- 3D HERO OBJECT -->
+
+    <div class="hero-visual" id="heroVisual">
+
+        <div class="hero-circle circle-one"></div>
+        <div class="hero-circle circle-two"></div>
+
+        <div class="fashion-card card-back">
+            <div class="card-label">DRYPE</div>
+        </div>
+
+        <div class="fashion-card card-front">
+
+            <div class="fashion-card-top">
+                <span>01</span>
+                <span>NEW DROP</span>
+            </div>
+
+            <div class="fashion-silhouette">
+                <div class="silhouette-head"></div>
+                <div class="silhouette-body"></div>
+            </div>
+
+            <div class="fashion-card-bottom">
+                <strong>OWN IT</strong>
+                <span>2026</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div></div>
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORY BAR ================= -->
+
+<section class="category-section">
+
+    <div class="section-heading reveal">
+        <p class="eyebrow">EXPLORE</p>
+        <h2>Find Your <em>Fit.</em></h2>
+    </div>
+
+    <div class="category-list">
+
+        <button class="category-item active" data-category="all">
+            <span>01</span>
+            All
+        </button>
+
+        <button class="category-item" data-category="abayas">
+            <span>02</span>
+            Abayas
+        </button>
+
+        <button class="category-item" data-category="jackets">
+            <span>03</span>
+            Jackets
+        </button>
+
+        <button class="category-item" data-category="shirts">
+            <span>04</span>
+            Shirts
+        </button>
+
+        <button class="category-item" data-category="shoes">
+            <span>05</span>
+            Shoes
+        </button>
+
+        <button class="category-item" data-category="pants">
+            <span>06</span>
+            Pants
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop-section" id="shop">
+
+    <div class="shop-top reveal">
+
+        <div>
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2>Latest <em>Pieces.</em></h2>
+        </div>
+
+        <div class="shop-tools">
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+            </div>
+
+            <select id="sortSelect">
+                <option value="default">Sort by</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name</option>
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="products-grid" id="productsGrid">
+        <!-- Products generated by JavaScript -->
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section" id="about">
+
+    <div class="about-visual reveal">
+
+        <div class="about-card">
+
+            <span class="about-number">DRYPE</span>
+
+            <div class="about-symbol">
+                D
+            </div>
+
+            <span class="about-year">2026</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-content reveal">
+
+        <p class="eyebrow">WHO WE ARE</p>
+
+        <h2>
+            Fashion
+            <em>without</em>
+            noise.
+        </h2>
+
+        <p>
+            DRYPE is built around a simple idea — your style should speak
+            before you do.
+        </p>
+
+        <p>
+            From refined abayas and everyday shirts to statement jackets,
+            shoes and pants, every piece is selected to help you create
+            your own identity.
+        </p>
+
+        <div class="about-line"></div>
+
+        <strong>OWN IT.</strong>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MARQUEE ================= -->
+
+<section class="marquee">
+
+    <div class="marquee-track">
+
+        <span>DRYPE</span>
+        <i>✦</i>
+        <span>OWN IT</span>
+        <i>✦</i>
+        <span>DRYPE</span>
+        <i>✦</i>
+        <span>OWN IT</span>
+        <i>✦</i>
+        <span>DRYPE</span>
+        <i>✦</i>
+        <span>OWN IT</span>
+        <i>✦</i>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="contact-content reveal">
+
+        <p class="eyebrow">GET IN TOUCH</p>
+
+        <h2>
+            Let's talk
+            <em>fashion.</em>
+        </h2>
+
+        <p>
+            Have a question about an order, size or product?
+            Contact DRYPE directly.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="tel:+916363468211" class="contact-button">
+                <span>Call</span>
+                <strong>+91 6363468211</strong>
+            </a>
+
+            <a href="mailto:ajmalajju6112@gmail.com" class="contact-button">
+                <span>Email</span>
+                <strong>ajmalajju6112@gmail.com</strong>
+            </a>
+
+            <a
+                href="https://www.instagram.com/son_of__aslam_/"
+                target="_blank"
+                class="contact-button"
+            >
+                <span>Instagram</span>
+                <strong>Insta Drype</strong>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+            <h3>DRYPE</h3>
+            <p>OWN IT.</p>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="shipping.html">Shipping & Returns</a>
+            <a href="admin.html" class="admin-link">Admin</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>© 2026 DRYPE. All rights reserved.</span>
+
+        <span>
+            Designed & developed by
+            <a
+                href="https://ajmal-profile-7.netlify.app/"
+                target="_blank"
+            >
+                Ajmal
+            </a>
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CART OVERLAY ================= -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+
+<!-- ================= CART DRAWER ================= -->
+
+<aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+
+        <div>
+            <p class="eyebrow">YOUR BAG</p>
+            <h2>Your Cart</h2>
+        </div>
+
+        <button id="closeCart">×</button>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+        <div class="empty-cart">
+            <div>○</div>
+            <p>Your cart is empty.</p>
+            <button id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+            <strong id="cartTotal">₹0</strong>
+
+        </div>
+
+        <button class="whatsapp-cart" id="checkoutButton">
+
+            <span>Prepaid UPI — 12% OFF</span>
+            <span>↗</span>
+
+        </button>
+
+        <button class="whatsapp-cart" id="whatsappCart" style="margin-top:8px;background:transparent;color:var(--black)">
+
+            <span>Order via WhatsApp</span>
+            <span>↗</span>
+
+        </button>
+
+        <small>
+            WhatsApp orders available on +91 6363468211
+            and +91 9972961311
+        </small>
+
+    </div>
+
+</aside>
+
+
+
+
+<!-- ================= CHECKOUT ================= -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="checkout-close" id="closeCheckout" aria-label="Close">×</button>
+    <div class="checkout-head">
+      <p class="eyebrow">SECURE CHECKOUT</p>
+      <h2 id="checkoutTitle">Delivery <em>details.</em></h2>
+      <p>Fill in your delivery information before choosing prepaid UPI.</p>
+    </div>
+
+    <form id="checkoutForm" class="checkout-form">
+      <div class="checkout-grid">
+        <label>Full name<input required name="name" autocomplete="name"></label>
+        <label>Mobile number<input required name="phone" inputmode="tel" pattern="[0-9+ ]{10,15}" autocomplete="tel"></label>
+        <label class="wide">Address<textarea required name="address" rows="3" autocomplete="street-address"></textarea></label>
+        <label>City<input required name="city" autocomplete="address-level2"></label>
+        <label>State<input required name="state" autocomplete="address-level1"></label>
+        <label>PIN code<input required name="pincode" inputmode="numeric" pattern="[0-9]{6}" autocomplete="postal-code"></label>
+      </div>
+
+      <div class="checkout-summary" id="checkoutSummary"></div>
+
+      <div class="payment-choice">
+        <label class="payment-card">
+          <input type="radio" name="paymentMethod" value="prepaid" checked>
+          <span><strong>Prepaid UPI</strong><small>Get 12% OFF after delivery details are completed.</small></span>
+          <b>12% OFF</b>
+        </label>
+        <div class="masked-upi">UPI ID: <strong>***************@***</strong></div>
+      </div>
+
+      <button class="checkout-pay" type="submit">Continue to UPI payment ↗</button>
+      <p class="checkout-note">The UPI destination is kept out of the page UI. Payment confirmation should be verified before dispatch.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ================= TRACKING ================= -->
+<section class="tracking-section" id="tracking">
+  <div class="tracking-box">
+    <p class="eyebrow">ORDER TRACKING</p>
+    <h2>Track your <em>DTDC</em> shipment.</h2>
+    <p>Enter the DTDC AWB / consignment number provided after dispatch.</p>
+    <div class="tracking-form">
+      <input id="trackingInput" placeholder="Enter DTDC tracking ID" autocomplete="off">
+      <button id="trackingButton" type="button">Track ↗</button>
+    </div>
+    <div id="trackingResult" class="tracking-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+    <span>✓</span>
+    <p>Added to cart</p>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
