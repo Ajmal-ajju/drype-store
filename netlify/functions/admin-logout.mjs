@@ -1,0 +1,1 @@
+export async function handler(){return {statusCode:200,headers:{"content-type":"application/json","set-cookie":"drype_admin=; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=0"},body:JSON.stringify({ok:true})}}

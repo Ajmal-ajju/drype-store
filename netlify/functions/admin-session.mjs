@@ -1,0 +1,3 @@
+import crypto from "node:crypto";
+function verify(event){const c=event.headers.cookie||"";const m=c.match(/(?:^|;\s*)drype_admin=([^;]+)/);if(!m)return false;const [raw,sig]=m[1].split(".");if(!raw||!sig)return false;const expected=crypto.createHmac("sha256",process.env.SESSION_SECRET).update(raw).digest("base64url");if(sig!==expected)return false;try{return JSON.parse(Buffer.from(raw,"base64url").toString()).exp>Date.now()}catch{return false}}
+export async function handler(event){if(!verify(event))return {statusCode:401,body:"Unauthorized"};return {statusCode:200,headers:{"content-type":"application/json"},body:JSON.stringify({ok:true})}}
