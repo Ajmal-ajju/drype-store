@@ -14,9 +14,9 @@
 Do not put the admin password or UPI ID into HTML/JS.
 
 In Netlify, add environment variables:
-- `ADMIN_PASSWORD` = your admin password
-- `SESSION_SECRET` = a long random secret
-- `UPI_ID` = your UPI ID
+- `ADMIN_PASSWORD` = Iamgroot@7
+- `SESSION_SECRET` = Iamgroot@7_Secret
+- `UPI_ID` = drype@payment.com
 - `UPI_NAME` = DRYPE
 
 The prepaid flow creates a UPI intent but does not automatically prove that a payment was received. For automatic payment verification, connect a payment gateway with server-side webhooks before dispatch.
