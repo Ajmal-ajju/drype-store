@@ -7,151 +7,7 @@
    PRODUCT DATA
    ===================================================== */
 
-let products = [
-
-    /* ABAYAS */
-
-    {
-        id: 1,
-        name: "Noor Abaya",
-        category: "abayas",
-        price: 2499,
-        type: "abaya"
-    },
-
-    {
-        id: 2,
-        name: "Aira Abaya",
-        category: "abayas",
-        price: 2899,
-        type: "abaya"
-    },
-
-    {
-        id: 3,
-        name: "Black Pearl Abaya",
-        category: "abayas",
-        price: 3199,
-        type: "abaya"
-    },
-
-    {
-        id: 4,
-        name: "Haya Abaya",
-        category: "abayas",
-        price: 2699,
-        type: "abaya"
-    },
-
-
-    /* JACKETS */
-
-    {
-        id: 5,
-        name: "Urban Jacket",
-        category: "jackets",
-        price: 2999,
-        type: "jacket"
-    },
-
-    {
-        id: 6,
-        name: "Classic Bomber",
-        category: "jackets",
-        price: 3499,
-        type: "jacket"
-    },
-
-    {
-        id: 7,
-        name: "Midnight Jacket",
-        category: "jackets",
-        price: 3299,
-        type: "jacket"
-    },
-
-
-    /* SHIRTS */
-
-    {
-        id: 8,
-        name: "Essential Shirt",
-        category: "shirts",
-        price: 1499,
-        type: "shirt"
-    },
-
-    {
-        id: 9,
-        name: "Oversized Shirt",
-        category: "shirts",
-        price: 1699,
-        type: "shirt"
-    },
-
-    {
-        id: 10,
-        name: "Classic Linen Shirt",
-        category: "shirts",
-        price: 1899,
-        type: "shirt"
-    },
-
-
-    /* SHOES */
-
-    {
-        id: 11,
-        name: "DRYPE Runner",
-        category: "shoes",
-        price: 2799,
-        type: "shoes"
-    },
-
-    {
-        id: 12,
-        name: "Street Low",
-        category: "shoes",
-        price: 2499,
-        type: "shoes"
-    },
-
-    {
-        id: 13,
-        name: "Mono Sneaker",
-        category: "shoes",
-        price: 3199,
-        type: "shoes"
-    },
-
-
-    /* PANTS */
-
-    {
-        id: 14,
-        name: "Wide Fit Pants",
-        category: "pants",
-        price: 1799,
-        type: "pants"
-    },
-
-    {
-        id: 15,
-        name: "Relaxed Cargo",
-        category: "pants",
-        price: 1999,
-        type: "pants"
-    },
-
-    {
-        id: 16,
-        name: "Classic Trousers",
-        category: "pants",
-        price: 2199,
-        type: "pants"
-    }
-
-];
+let products = [];
 
 
 /* =====================================================
@@ -174,7 +30,7 @@ async function loadRemoteProducts(){
         const res = await fetch("/api/products", {headers: {"Accept":"application/json"}});
         if(!res.ok) return;
         const data = await res.json();
-        if(Array.isArray(data.products) && data.products.length){
+        if(Array.isArray(data.products)){
             products = data.products;
             renderProducts();
         }
@@ -981,7 +837,7 @@ I want to place an order:
 
         message +=
 `
-• ${item.name}
+- ${item.name}
   Quantity: ${item.quantity}
   Price: ${formatPrice(
       item.price * item.quantity
@@ -1353,7 +1209,7 @@ function revealOnScroll() {
 
 
         if (
-            top <
+            top 
             window.innerHeight - 80
         ) {
 
