@@ -6,7 +6,7 @@ async function handler(event){
  if(!verify(event))return {statusCode:401,body:JSON.stringify({error:"Unauthorized"})};
  const {orderId,trackingId}=JSON.parse(event.body||"{}");
  if(!orderId||!trackingId)return {statusCode:400,body:JSON.stringify({error:"Order ID and DTDC tracking ID are required."})};
- const s=getStore("drype-orders"); const orders=await s.get("orders",{type:"json"})||{};
+ const s=getStore({name:"drype-orders",siteID:process.env.SITE_ID,token:process.env.BLOBS_TOKEN}); const orders=await s.get("orders",{type:"json"})||{};
  orders[orderId]={...(orders[orderId]||{}),trackingId:String(trackingId).trim(),trackingUrl:`https://www.dtdc.in/tracking/shipment-tracking.asp?strCnno=${encodeURIComponent(String(trackingId).trim())}`};
  await s.setJSON("orders",orders);
  return {statusCode:200,headers:{"content-type":"application/json"},body:JSON.stringify({ok:true})};

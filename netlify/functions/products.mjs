@@ -1,7 +1,7 @@
 import { getStore } from "@netlify/blobs";
 import crypto from "node:crypto";
 function verify(event){const c=event.headers.cookie||"";const m=c.match(/(?:^|;\s*)drype_admin=([^;]+)/);if(!m)return false;const [raw,sig]=m[1].split(".");if(!raw||!sig)return false;const expected=crypto.createHmac("sha256",process.env.SESSION_SECRET).update(raw).digest("base64url");if(sig!==expected)return false;try{return JSON.parse(Buffer.from(raw,"base64url").toString()).exp>Date.now()}catch{return false}}
-async function store(){return getStore("drype-catalog")}
+async function store(){return getStore({name:"drype-catalog",siteID:process.env.SITE_ID,token:process.env.BLOBS_TOKEN})}
 async function handler(event){
   const s=await store();
   if(event.httpMethod==="GET"){const products=await s.get("products",{type:"json"})||[];return {statusCode:200,headers:{"content-type":"application/json","cache-control":"no-store"},body:JSON.stringify({products})}}
